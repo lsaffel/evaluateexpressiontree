@@ -28,11 +28,14 @@ def evaluateExpressionTree(tree):
     if tree.value >= 0:
         return tree.value
 
+    leftValue = evaluateExpressionTree(tree.left)
+    rightValue = evaluateExpressionTree(tree.right)
+
     if tree.value == -1:
-        return evaluateExpressionTree(tree.left) + evaluateExpressionTree(tree.right)
+        return leftValue + evaluateExpressionTree(tree.right)
     elif tree.value == -2:
-        return evaluateExpressionTree(tree.left) - evaluateExpressionTree(tree.right)
+        return leftValue - evaluateExpressionTree(tree.right)
     elif tree.value == -3:
-        return int(evaluateExpressionTree(tree.left) / evaluateExpressionTree(tree.right))
+        return int(leftValue / rightValue)
     else:
-        return evaluateExpressionTree(tree.left) * evaluateExpressionTree(tree.right)
+        return leftValue * rightValue
