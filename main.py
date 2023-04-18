@@ -9,7 +9,9 @@
 # • -3 : Division operator, dividing the left subtree by the right subtree.
 #           If the result is a decimal, it should be rounded towards zero.
 # • -4 : Multiplication operator, multiplying the left and right subtrees.
-# You can assume the tree will always be a valid expression tree. Each operator also works as a grouping symbol, meaning the bottom of the tree is always evaluated first, regardless of the operator.
+# You can assume the tree will always be a valid expression tree. Each operator also
+# works as a grouping symbol, meaning the bottom of the tree is always evaluated first,
+# regardless of the operator.
 
 # This is an input class.
 class BinaryTree:
